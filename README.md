@@ -11,6 +11,22 @@ Inventory and order management system with product, customer, order, and dashboa
 
 ## Setup
 
+## Quick Start
+
+Run the full project with one script from the root folder:
+
+```powershell
+cd C:\Users\HP\Downloads\etharaAI
+.\start-dev.ps1
+```
+
+The script starts:
+
+- Backend API on `http://localhost:8000`
+- Frontend app on `http://localhost:5173`
+
+It also creates missing local `.env` files from the provided examples.
+
 Backend environment:
 
 ```bash
