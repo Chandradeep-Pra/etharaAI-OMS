@@ -1,0 +1,149 @@
+.table-wrap {
+  width: 100%;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(248, 248, 250, 0.72);
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--line-soft);
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td {
+  color: #253142;
+  font-size: 0.94rem;
+}
+
+tbody tr {
+  transition: background 140ms ease;
+}
+
+tbody tr:hover {
+  background: rgba(0, 113, 227, 0.035);
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+}
+
+td:nth-last-child(-n + 2),
+th:nth-last-child(-n + 2) {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.pending-row {
+  opacity: 0.68;
+}
+
+.table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.table-pagination select,
+.table-pagination button {
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.75);
+  font: inherit;
+  font-weight: 650;
+}
+
+.table-pagination select {
+  padding: 0 8px;
+}
+
+.table-pagination button {
+  padding: 0 12px;
+}
+
+.pagination-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.action-cluster {
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.stock-badge {
+  display: inline-flex;
+  min-width: 46px;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--success);
+  background: var(--success-soft);
+  font-weight: 700;
+}
+
+.stock-badge.watch {
+  color: #875208;
+  background: var(--warning-soft);
+}
+
+.stock-badge.low {
+  color: var(--danger);
+  background: var(--danger-soft);
+}
+
+@media (max-width: 560px) {
+  table {
+    min-width: 520px;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+    font-size: 0.88rem;
+  }
+
+  .table-pagination {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pagination-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .table-pagination select,
+  .table-pagination button {
+    width: 100%;
+  }
+}

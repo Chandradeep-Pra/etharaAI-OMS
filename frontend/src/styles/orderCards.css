@@ -1,0 +1,52 @@
+.order-list {
+  margin-top: 10px;
+}
+
+.order-card {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.order-card-header div:first-child {
+  display: grid;
+  gap: 4px;
+}
+
+.order-card-header span,
+.order-items {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.order-total {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.order-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.order-items span {
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(0, 113, 227, 0.08);
+  font-weight: 650;
+}
+
+@media (max-width: 560px) {
+  .order-card-header {
+    flex-direction: column;
+  }
+}
